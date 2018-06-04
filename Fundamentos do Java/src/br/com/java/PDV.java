@@ -17,7 +17,7 @@ public class PDV {
         //processamento
         System.out.println("valor pago:");
         valorpago = teclado.nextDouble();
-        //saída
+        // saída
          troco = (valorpago - total);
          System.out.println("troco: " + troco);
 	}

@@ -1,3 +1,9 @@
+/**
+ * Atividade JoKenPo
+ * @author  Paulo Vitor e lucas Souza Oliveira
+ * data 13/06/2018
+ */
+
 package br.com.java;
 
 import java.util.Random;

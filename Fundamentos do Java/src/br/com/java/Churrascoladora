@@ -1,0 +1,73 @@
+/**
+ * Atividade de avaliação - Churrascoladora
+ * @author Paulo Vítor Santos Figueiredo, Lucas Souza
+ */
+package br.com.java;
+
+import java.util.Scanner;
+
+public class Churrascoladora {
+
+	public static void main(String[] args) {
+		// variaveis
+				double homens, mulher, crianca, carne, refri, cerveja, carnehomem, carnecrianca, carnetotal, precocarne,
+						cervejah, cervejam, cervejat, precocer, refricri, refrim, refrit, precorefri, valort, valorpe;
+
+				Scanner teclado = new Scanner(System.in);
+				// entrada
+				System.out.println("==== CHURRASCOLADORA ====");
+				System.out.println("");
+				System.out.println("Quantidade de Homens: ");
+				homens = teclado.nextDouble();
+				System.out.println("Quantidade de Mulheres: ");
+				mulher = teclado.nextDouble();
+				System.out.println("Quantidade de Crianças: ");
+				crianca = teclado.nextDouble();
+				System.out.println("Preço médio do kg de carne: ");
+				carne = teclado.nextDouble();
+				System.out.println("Preço médio da lata de cerveja: ");
+				cerveja = teclado.nextDouble();
+				System.out.println("Preço médio da lata de refri: ");
+				refri = teclado.nextDouble();
+				// processamento
+				
+				// carne
+				carnehomem = 0.3 * (homens + mulher);
+				carnecrianca = 0.1 * crianca;
+				carnetotal = carnehomem + carnecrianca;
+				precocarne = carnetotal * carne;
+				
+				// cerveja
+				cervejah = homens * 12;
+				cervejam = mulher * 4;
+				cervejat = cervejah + cervejam;
+				precocer = cerveja * cervejat;
+				
+				// refri
+				refricri = crianca * 2;
+				refrim = mulher * 2;
+				refrit = refricri + refrim;
+				precorefri = refri * refrit;
+				
+				// valor total
+				valort = precocarne + precocer + precorefri;
+				
+				// valor por pessoa
+				valorpe = valort / (homens + mulher);
+				
+				// saida
+				System.out.println("");
+				System.out.println("________________________________");
+				System.out.println("Lista de compras");
+				System.out.println("");
+				// exibir quantidade e preço
+				System.out.println("Quantidade total de carne KG: " + carnetotal + " " + "Preço total: R$ " + precocarne);
+				System.out.println("Quantidade total de cerveja: " + cervejat + " " + "Preço total: R$ " + precocer);
+				System.out.println("Quantidade total de refri: " + refrit + " " + "Preço total: R$ " + precorefri );
+				System.out.println("");
+				System.out.println("___________________________________");
+				System.out.println("Valor total do churras: R$ " + valort);
+				System.out.println("Valor por pessoa: R$ " + valorpe);
+			}
+
+		}
